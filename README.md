@@ -24,3 +24,12 @@
 - 5、安装chrome浏览器
 - 6、安装chromedriver
 - 7、执行代码
+
+### 补充
+
+```python
+self.userName = 'xxxx'  # 登录乐约平台的用户名
+self.password = 'xxxx'  # 密码
+self.host = 'http://portal.leyue100.com'   # 不用改
+self.doctorPageUrl = 'url'   # 需要挂号的医生的页面地址
+```

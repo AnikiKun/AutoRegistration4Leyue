@@ -13,6 +13,8 @@ class LeyueRegistration(object):
         self.userName = 'xxxx'
         self.password = 'xxxx'
         self.host = 'http://portal.leyue100.com'
+        self.tDate = '2018-03-17'
+        self.doctorPageUrl = 'http://portal.leyue100.com/aw/registered/doctor?hid=d7YJg9tdDbH&dmid=9hyC7U37fSs&date={}&did=4RTLjbCxUIt'.format(self.tDate)
         self.cookies = []
 
     def loginFlow(self, driver):
@@ -48,8 +50,7 @@ class LeyueRegistration(object):
     def start(self):
         driver = webdriver.Chrome()
         driver.implicitly_wait(180)
-        url = 'http://portal.leyue100.com/aw/registered/doctor?hid=d7YJg9tdDbH&dmid=9hyC7U37fSs&date=2018-02-24&did=4RTLjbCxUIt'
-        # url = 'http://portal.leyue100.com/normal/registered/doctor?did=4RTLjbCxUIt&wid=6ViEjVnz5Uf&date=2018-02-03&dmid=c7ZtBTTpYxy'
+        url = self.doctorPageUrl # url = 'http://portal.leyue100.com/normal/registered/doctor?did=4RTLjbCxUIt&wid=6ViEjVnz5Uf&date=2018-02-03&dmid=c7ZtBTTpYxy'
         self.loginFlow(driver)
         # url = 'http://portal.leyue100.com/aw/registered/doctor?did=bwaFnvmcLAh&hid=d7YJg9tdDbH&date=2017-12-26&dmid=27ref6QNt2N'
         driver.get(url)
